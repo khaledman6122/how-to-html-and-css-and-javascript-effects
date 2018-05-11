@@ -1,0 +1,96 @@
+<!doctype HTML>
+<html>
+    <head>
+    <meta charset="utf-8">
+    </head>
+
+    <style>
+        .container{position: relative;width:500px;height: 500px; margin: auto;border: 1px solid black;overflow: hidden;} 
+        .gallery{display: none}
+        .gallery img{width:500px; height:500px;}
+        .gallery p{position: absolute;top:0}
+        /* .container a#prev ,.container a#next { position: absolute;background-color: #000;        color: #fff;    text-decoration: none; text-align: center;
+            padding: 10px;padding-bottom:15px;     top:47%;    width: 15px; height: 15px; 
+            border-radius:0 8px 8px 0;     
+        }*/  
+        
+    </style>
+    
+    <body>
+     
+        
+        <div class="container">
+            
+        <div class="gallery">
+            <img src="img/1.jpg">
+            <p>caption 1</p>
+        </div>
+        
+        <div class="gallery">
+            <img src="img/2.jpg">
+            <p>caption 2</p>
+        </div>
+        
+        <div class="gallery">
+            <img src="img/3.jpg">
+            <p>caption 3</p>
+        </div>
+        
+        <div class="gallery">
+            <img src="img/4.jpg">
+            <p>caption 4</p>
+        </div>
+        
+        <div class="gallery">
+            <img src="img/5.jpg">
+            <p>caption 5</p>
+        </div>
+           
+           
+        </div>
+        
+        
+    </body>
+
+    
+    <script>
+     
+     
+     var x=document.querySelectorAll('.gallery');
+      var arr=new Array();  arr=x; 
+        //no need for creat a new array you can go through x directly
+      var i=0;
+    var interval1=setInterval(func,1000);
+    function func(){
+        for(var j=0;j<arr.length;j++)arr[j].style.display='none';
+        
+        arr[i].style.display='block';
+        if(i<arr.length) i++;
+        if(i==arr.length)i=0;
+        
+    }    
+        
+      
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+    </script>
+</html>

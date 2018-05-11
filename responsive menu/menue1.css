@@ -1,0 +1,40 @@
+ body{margin:0; font-family: sans-serif; background-color: brown;}
+        .topnav { background-color:#313131; overflow: hidden;}
+        .topnav a{color:#ffffff; background-color: red; text-decoration: none; float:left; padding:8px 8px; display:block; text-align: center; }
+        .topnav a:hover{color:#313131; background-color:#ffffff}
+        .topnav  .icon{display:none;font-size:13px;} 
+        /*
+          -the whole link not just the class is gone
+          -if u do not float:right or display:none it will makes a confussed bottom border to the other links    
+        */
+       
+
+        /* if width <=600 do the following*/
+        @media screen and (max-width:600px){
+            .topnav a:not(:first-child){display: none;}   
+            .topnav a.icon{float:right; display:block;}
+            /* 
+            a.icon not (a  .icon) 
+            .topnav .icon{display:none;} the whole link not just the class is gone to retrive it back
+            .topnav a.icon{float:right; display:block;}
+            that will add it as it's first time
+            */
+        }
+        
+        /* if width <=600 do the following*/
+        @media screen and (max-width:600px){
+            .topnav.responsive{position: relative;}
+            .topnav.responsive a.icon{position: absolute; top:0; right:0;}
+    /* note .icon OR a.icon both here are true because we retrived it back */
+            .topnav.responsive a {float:none; text-align:left; display:block;}
+        }
+           
+
+
+
+
+
+
+
+
+

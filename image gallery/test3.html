@@ -1,0 +1,202 @@
+<!doctype HTML>
+<html>
+<head>
+    <title>Neon</title>
+    <meta charset="utf-8">
+     
+    </head>
+
+    <link rel="stylesheet" type="text/css" href="css/headerANDnav.css">
+
+    
+    
+    <style>  
+        
+        .container{width: 600px; height:600px;  margin: auto;
+         overflow: hidden; position: relative; background: linear-gradient(to right,rgba(255, 255, 255, 0.13))}
+        
+        .container .mySlide{ display: none;}
+        .caption{position: absolute; bottom:0; left:10%; } 
+        .number{position: absolute; top: 0; left: 48%; }
+        .mySlide img{width: 600px; height: auto;}
+        .container a.prev ,.container a.next {position: absolute; top:50%; background-color:#d3d1d1; color: #fff; width:40px; height: 35px; border-radius: 50%;padding-top:15px; text-align: center; cursor: pointer; opacity: 0.4;}
+        .container a.next {right: 0;}
+        .container a.prev:hover ,.container a.next:hover{opacity: 1; transition: all 0.6s ease; background-color: #7b7b7b;}
+        
+         .dot{ 
+        display: inline-block;
+        left:48%;
+        position: relative;
+        width:15px; height:15px; 
+        border-radius:50%; 
+        background-color:#d3d1d1; 
+        transition:background-color 0.5s cubic-bezier(.96, .13, .27, .97); 
+        cursor: pointer; 
+        margin-top: 10px;      
+        }
+         .dot:hover{
+        background-color:#7b7b7b;  
+        transition:background-color 0.5s ease; 
+        }
+        .active{ background-color:#ef1414; }
+       
+        
+        
+        .fade{
+            animation-name: fade;
+            animation-duration: 2s;
+         }
+        @keyframes fade{
+            from{opacity: 0.2}
+            to{opacity: 1}
+        }
+        
+        
+        
+        
+        
+        
+    </style>
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <body>
+     
+        
+        <div class="container">
+               
+            
+        <div class="mySlide fade">
+                <img src="img/1.jpg">
+                <div class="caption">caption 1</div>
+                <div class="number">1/5</div>
+            </div>
+            
+            
+        <div class="mySlide fade">
+                <img src="img/2.jpg">
+                <div class="caption">caption 2</div>
+                <div class="number">2/5</div>
+            </div>
+            
+            
+        <div class="mySlide fade">
+                <img src="img/3.jpg">
+                <div class="caption">caption 3</div>
+                <div class="number">3/5</div>
+            </div>
+            
+            
+        <div class="mySlide fade">
+                <img src="img/4.jpg">
+                <div class="caption">caption 4</div>
+                <div class="number">4/5</div>
+            </div>
+            
+            
+        <div class="mySlide fade">
+                <img src="img/5.jpg">
+                <div class="caption">caption 5</div>
+                <div class="number">5/5</div>
+            </div>
+            
+        
+        
+            <a class="prev"  >&#10094;</a>
+            <a class="next" >&#10095;</a>
+        
+            
+        </div>
+
+        
+        
+        
+        
+        
+        <div class="dotContainer">
+            <span class="dot" onclick="current(1)"></span>
+            <span class="dot" onclick="current(2)"></span>
+            <span class="dot" onclick="current(3)"></span>
+            <span class="dot" onclick="current(4)"></span>
+            <span class="dot" onclick="current(5)"></span>
+        </div>
+        
+        
+        
+        
+        
+    
+ </body>
+   
+    
+     <script>
+          
+         
+         
+         
+         var prev=document.querySelector('.prev')
+         var next=document.querySelector('.next')
+         prev.addEventListener("click",function(){ dec(-1)} );
+         next.addEventListener("click",function(){  inc(1) });
+           
+         
+         
+         function current(num){slideIndex=num;  showSlide(slideIndex);}
+         function inc(num){slideIndex+=num;    showSlide(slideIndex);}
+         function dec(num){slideIndex-=num;   showSlide(slideIndex);}
+         
+         
+         
+         
+         
+         
+         var slideIndex=1;
+         showSlide(slideIndex);         //current(slideIndex);
+
+
+         
+         
+        function showSlide(index)
+         {
+            
+            var slides=document.getElementsByClassName('mySlide');
+            var dots=document.getElementsByClassName('dot');
+            
+             if(index>slides.length) slideIndex=1;
+             if(index<1) slideIndex=slides.length;
+            
+             for(var i=0;i<slides.length;i++)
+             { slides[i].style.display="none"; }
+             
+             
+            for(var i=0;i<dots.length;i++)
+             {  
+            //dots[i].addClass=dots[i].className.replace(" active","");
+            //dots[i].className = dots[i].className.replace(".active", "");
+     
+            dots[i].className = dots[i].className.replace(" active", "");
+             }
+             
+            
+             slides[slideIndex-1].style.display="block";
+             dots[slideIndex-1].classList.add("active");
+            
+        }
+         
+         
+         
+    </script>
+
+    
+    
+    
+    
+    
+</html>

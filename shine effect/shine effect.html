@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="design a template with html and css ">
+</head>
+  
+    
+    
+    
+    <style>
+
+    .icon:nth-child(1) { background: cornflowerblue; }
+    .icon:nth-child(2) { background: salmon; }
+    .icon:nth-child(3) { background: gray; }
+
+        .icon{
+             text-align: center; padding: 10px;
+            margin: 10px;  position: relative; overflow: hidden;
+            text-decoration: none; color: #fff; display: inline-block;
+        }
+        
+        
+        /*the effect */
+        .icon::after{
+            content: "";
+            position: absolute;
+        /*width and height :after should me bigger than :hover:after*/
+            width:200%; height:200%;
+            transform: rotate(30deg);
+            background: linear-gradient(to right,
+            rgba(255, 255, 255, 0.13) 0%,
+            rgba(255, 255, 255, 0.13) 77%,
+            rgba(255, 255, 255, 0.5) 92%,
+            rgba(255, 255, 255, 0.0) 100%
+            );
+            /*top and left should be negative...opacity=0 and in :hover:after opacity=1*/
+            top:-150%;
+            left:-150%; 
+            opacity: 0;
+            
+        }
+        
+        
+        /*timing and locating the effect*/
+        .icon:hover:after{
+            top:-100%;
+            left:-100%;
+            opacity: 1;
+            transition-property: top,left,opacity;
+            transition-duration: 0.8s,0.8s,1s;
+            transition-timing-function: ease;
+         }
+        
+        
+    </style>
+    
+    <body>
+
+        <a href="#" class="icon">let</a>
+        <a href="#" class="icon">it</a>
+        <a href="#" class="icon">shine</a>
+
+        <div class="icon" style="color: black; background-color: dodgerblue">
+            <p>
+        hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello  hello hello hello hello hello hello hello hello hello hello hello hello hello  hello hello hello hello hello hello hello hello hello hello hello hello hello </p>
+        </div>
+        
+        
+        
+        
+    </body>
+      
+    
+</html>
+    

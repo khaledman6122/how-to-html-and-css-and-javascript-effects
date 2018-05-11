@@ -1,0 +1,121 @@
+.wrapper{
+    padding: 0; margin: auto;
+    max-width:800px;     
+    background-color: #af02af;
+    display: grid;
+    
+     
+    grid-template-columns: repeat(3,1fr);
+    /*  3 columns each with the same fr*/
+    
+    grid-row-gap: 10px;
+    /*it makes a 10px space "gap" between each row and the other*/
+    
+    grid-column-gap:20px ;
+    /*it makes a 20px space "gap" between each column and the other*/
+
+      
+}
+
+/*
+  why not to use margin in ".wrapper div"  to make a gap 
+    because if we did that it will surround each div with a gap that means it will also makes a gap with the outer layer of the grid which we dont want it in that case
+    but if u want to margin anything oki but be smart when try to use it 
+      */
+    
+
+.wrapper  div{ background-color: aqua; padding: 30px;}
+
+
+.wrapper  div:nth-child(even){ background-color: #ccc;}
+
+
+
+
+
+
+
+
+
+
+.wrapper2{
+    display: grid;
+    max-width: 800px;   margin:auto;
+    background-color: darkred;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 20px; 
+    
+    /*if we margin here it will makes a "space" between wrapper and wrapper2 */
+    margin-top:50px; 
+}
+
+
+.wrapper2  div{ background-color: #3800b7; padding: 30px;
+margin:10px;
+/* if we add a margin of 10px we will make a gap between the divs and the grid it self from inside */ 
+}
+
+
+.wrapper2  div:nth-child(even){ background-color: #02903e;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

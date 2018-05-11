@@ -1,0 +1,371 @@
+/*
+ 
+.dropdown1{
+    
+    position:relative;  
+    display:inline-block;
+     background-color:#3e8e41 ;
+    
+}
+
+.dropdown1  .content-dropdown1
+{
+    position:absolute;
+    display: none;
+    box-shadow: 4px 4px 0 0 rgba(0,0,0,0.10);
+    background-color: #f9f9f9;
+    width:180px;
+    height:50px;
+    text-align: center; 
+    z-index: 1;
+}
+ 
+ 
+ .dropdown1:hover  .content-dropdown1
+{
+        display: block;
+}
+ */
+
+
+
+
+
+
+
+
+
+
+/*
+.dropdown2{
+    position:relative;
+    display: inline-block;
+}
+
+
+.dropdown2  .content-dropdown2
+{
+    position: absolute;
+    display: none;
+    box-shadow:  0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    background-color: #d6a6a6;
+
+}
+
+
+.dropdown2  .content-dropdown2 img{
+    
+    width:200px; height:100px;
+}
+
+.dropdown2  .content-dropdown2 p{
+    text-align: center;
+    padding: 10px;
+}
+
+
+.dropdown2:hover .content-dropdown2 {
+    
+    display: block;
+}
+*/
+
+
+
+
+
+
+
+
+ 
+.dropdown3  
+{
+        position:relative;
+        display: block;
+}
+
+.dropdown3  .menue{
+    color:#ffffff;  background-color:#00be07; width:150px;
+    text-align: center;     font-family: monospace;   font-weight: bolder;
+    padding-top:8px;
+    padding-bottom:8px;
+    box-shadow:0px 8px 16px 0px   rgba(0,0,0,0.2);
+
+}
+
+
+
+.dropdown3 .navbar
+{  
+    display:none;     width:150px;
+    box-shadow:  0px 8px 16px 0px rgba(0,0,0,0.2);
+
+}
+ 
+
+
+
+.dropdown3 .navbar ul{
+    
+    list-style-type:none;
+    padding: 0;
+    margin:0;
+    
+    width:150px;
+    position:absolute;
+    background-color: #d6d6d6;
+    box-shadow:0px 8px 16px 0px rgba(0,0,0,0.3);
+}
+.dropdown3 .navbar ul li
+{
+        display: block;
+ }
+
+.dropdown3 .navbar ul li a
+{
+    padding : 5px 8px 5px 8px;
+    display: block;
+    text-decoration: none;
+    color:black;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.dropdown3:hover   .navbar{
+display:block;
+}
+
+.dropdown3 .navbar ul li a:hover
+{
+        color:#ffffff;
+        background-color: #ff3100;
+}
+
+
+.dropdown3 .navbar ul li a:active
+{
+        color:#ffffff;
+        background-color: #b42300;
+}
+
+
+ 
+
+
+
+/*************************************************************************************/
+
+
+
+
+
+
+
+
+
+
+.tooltip
+{
+    position:relative;
+    width:150px;
+    color:black;
+    background-color: #ffffff;
+    border: 1px dotted black ;
+    margin-top: 150px;     margin-left:150px;
+
+}
+
+.tooltip .tooltip-text
+{
+    position: absolute;
+    visibility:hidden;
+    /*transition opacity in time 3.5 second from 0  to 1 when hover on .tooltip*/
+    opacity:0;      
+    transition: opacity 3.5s;  
+    border-radius: 6px;
+    width:100px;
+    padding: 5px 0;
+    text-align: center; background-color: #000000;  color:#ffffff;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltip-text
+{ 
+    visibility: visible;  
+    /* transition the opacity from 0 to 1 in 3.5 seconds*/ 
+    opacity:1;
+}
+
+
+
+
+
+
+
+/* tooltip-text  positioning top*/
+/*100% from bottom u took all area of bottom 100%---> to top */
+/* 0% from bottom u took nothing from the bottom area---> still bottom */
+/*  left:50% in the midel--->it can be rightt:50%; */
+/*
+.tooltip .tooltip-text
+{
+    bottom:150%;  
+    left:50%; 
+    margin-left: -50px;
+}
+*/
+
+/*bottom arrow*/
+/*
+.tooltip .tooltip-text::after
+{
+    content:' ';
+    position: absolute;
+    top:100%;
+    left:50%;
+    margin-left: -5%;
+    border-width: 5px;
+    border-style: solid;
+    border-color:black transparent transparent transparent;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* tooltip-text  positioning bottom*/
+
+/* 150% from top u took all area of top 150%---> to bottom */
+/* 0% from top u took nothing from the top area---> still top */
+/* left 50% in the middel--->it can be right:50%; */ 
+/* margin-left:-50px; /* use half of the width *-1 or negative of left position value*/
+/*
+.tooltip .tooltip-text
+{
+    top:150%; 
+    left:50%;  
+    margin-left:-50px; 
+}
+*/
+
+
+/*top arrow*/
+/*
+.tooltip .tooltip-text::after
+{
+    content:' ';
+    position: absolute;
+    bottom:100%;
+    left:50%;
+    margin-left: -5%;
+    border-width: 5px;
+    border-style:solid;
+    border-color: transparent transparent black transparent ;    
+}
+*/
+
+
+/*
+
+.tooltip .tooltip-text::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+*/
+
+
+
+
+
+
+
+
+/* tooltip-text  positioning right */
+/* -5% from top u took -5% area of top---> to top */
+/* left:105%; u took 105% area of left--->to right*/ 
+/*
+.tooltip .tooltip-text
+{
+    top:-5%;  
+    left:105%;  
+    width:100px;
+}
+*/
+
+/*left arrow*/
+/*
+.tooltip .tooltip-text::after
+{
+    content:' ';
+    position: absolute;
+    top:50%;
+    right:100%;
+    margin-top: -5px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: transparent black transparent  transparent ;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* tooltip-text  positioning left */
+/* -5% from top u took -5% area of top---> to top */
+/* right:105%; u took 105% area of right--->to left*/ 
+.tooltip .tooltip-text
+{
+    top:-5%;  
+    right:105%;  
+    width:100px;
+}
+
+/*right arrow*/
+.tooltip .tooltip-text::after
+{
+    content:' ';
+    position: absolute;
+    top:50%;
+    left:100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent black;
+      
+}
+
+
+
+

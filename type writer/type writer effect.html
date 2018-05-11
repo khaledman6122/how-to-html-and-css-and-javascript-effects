@@ -1,0 +1,75 @@
+<!doctype HTML>
+    <html>
+
+        <head>
+        <meta charset='utf-8'>
+        </head>
+
+
+        <style>
+        
+        </style>
+
+
+        <body>
+        <div id="empty" ></div>
+        <div id="empty2" ></div>
+         </body>
+
+        <script>
+            
+            
+            
+             
+            var line='hi, my name is khaled adel';
+            var x=document.getElementById('empty')
+            var i=0;
+            (function typeWriter(){
+                if(i<line.length){
+                    x.innerHTML+=line.charAt(i);
+                    i++;
+                    setTimeout(typeWriter,100); //setTimeout to re-run the function again
+                }   //when i==line.length setTimeout will not work again 
+             }) ();
+            //self invoke function to make the function automatically run without adding an external trigger or 'addEventListener' 
+            //self invoke make function call itself one time only
+             
+            
+            
+            
+            
+            
+            var line2='hi, my name is khaled adel';
+            var x2=document.getElementById('empty2')
+            var j=0;
+            var interval2=setInterval(typeWriter2,100);
+            function typeWriter2(){
+                if(j<line2.length){
+                    x2.innerHTML+=line2[j];
+                    j++;
+                }
+             }
+             
+            
+             
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </script>
+        
+
+
+
+
+
+
+
+    </html>

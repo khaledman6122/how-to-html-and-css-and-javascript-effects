@@ -1,0 +1,129 @@
+.wrapper{
+    display: grid;
+    margin: auto; padding: 0;
+    max-width: 800px;
+    
+    grid-template-columns: repeat(4,1fr) ; /* column=n so edges=n+1 */
+    /* column=n so edges=n+1 */
+    /* don't ever forget 4 columns but 5 edges*/
+    
+    /*background-color: #797979;*/
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    
+}
+
+.wrapper div{
+    padding: 10px; 
+    background-color: aqua;
+}
+
+.wrapper div:nth-child(even){
+        background-color: #ccc;
+}
+
+
+.wrapper .one{
+    /*take 3 rows (1 , 2 , 3) for this div*/
+    /*edges we take 1,2,3,4 */    
+    
+    grid-row: 1/3; /*means take edges from 1 to 3 (1,2,3)*/
+    /*
+    grid-row-start: 1;
+    grid-row-end: 3;
+    */
+    
+    /* if you dont know the start and the end do the following span  */
+    /*grid-row: span 3;*/   /*it takes 2 rows with 3 edges*/
+
+    
+    
+    
+    
+    /*take 3 columns (1 , 2 , 3) for this div*/
+    /*edges we take 1,2,3,4  */ 
+    grid-column: 1/4;
+    grid-column-start: 1;
+    grid-column-end:4;
+   
+    /*grid-column: span 3 ;*/
+}
+.wrapper .two{
+    /*take 1 column for this div*/
+    
+     
+    /*grid-column:span 1;*/     /*two column from the start*/
+    
+    grid-column-start:4; 
+    /*the end of the .one column edge is the start edge of .two*/
+    
+    grid-column-end: 5;   /*we have edges 1,2,3,4,5*/
+    /*the column edge 5 is the last edge we have */
+}
+.wrapper .three{
+    grid-row: span 1;
+ }
+
+
+
+.wrapper .five{
+    grid-column: 3/4;
+}
+
+.wrapper .four{
+    grid-column: 1/3;
+}
+
+
+.wrapper .three{
+    padding-bottom:100px; 
+    /* .one will be stretched too because its a grid property*/
+ }
+
+ 
+
+
+
+
+
+
+.nested{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 5px;
+}
+
+.nest1{ 
+    
+    border:1px solid red; 
+    grid-row:1/3;
+    grid-column: 1/3;
+} 
+
+.nest2{
+border:1px solid #000;    grid-row:1/3;
+    grid-column: 3/4;
+}
+.nest3{
+    border:1px solid green; 
+    grid-column: 1/4;
+}
+
+
+.wrapper .nested .nested2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.wrapper .nested .nested2 .lastNest1
+{ border:3px solid green; }
+
+.wrapper .nested .nested2 .lastNest2
+{border:3px dashed red;}
+
+
+
+
+
+

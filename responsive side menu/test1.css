@@ -1,0 +1,53 @@
+.side_menu{
+    width:0;
+    height: 100%;
+    top:0;
+    right: 0;
+    background-color: red;
+    overflow-x: hidden;
+    position:fixed;
+    z-index: 1;
+    transition: width 1.5s ease-in-out;
+}
+.side_menu a{
+    width: 100%;
+    padding: 8px 8px 8px 16px ;
+    font-size: 15px;
+    text-decoration: none;
+    display: block;
+    float: left;
+    background-color: aqua;
+}
+.side_menu a:hover{
+    background-color: navajowhite;
+}
+
+.side_menu .closebtn {
+     position: relative;
+    top: 0;
+     margin-left: 200px;
+    font-size: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

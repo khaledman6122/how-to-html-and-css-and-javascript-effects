@@ -1,0 +1,54 @@
+<!doctype HTML>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta title="w3schools">
+    </head>
+    <link rel="stylesheet" href="slide_down_onscroll.css" type="text/css">
+    <body>
+    
+         
+        
+<!--anything that will be used or changed with javascrpt give it an id not class  -->
+
+<div id="navbar">
+  <a href="#home">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+</div>
+  
+        
+        
+        
+        
+        
+<div >
+  <p><b>This example demonstrates how to slide down a navbar when the user starts to scroll the page.</b></p>
+  <p>Scroll down this frame to see the effect!</p>
+  <p>Scroll to the top to hide the navbar.</p>
+  <p>Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+
+    <script>
+        window.onscroll=function(){scroll();}
+        function scroll(){
+            if(document.body.scrollTop>20||document.documentElement.scrollTop>20){
+                //0px something new to the css will be added for it
+                document.getElementById("navbar").style.top="0";
+            }
+            else{
+                //-50px a value in css navbar
+               document.getElementById("navbar").style.top="-50px"; 
+            }
+        }
+        
+    </script> 
+ 
+   
+    </body>
+
+      
+    
+
+</html>

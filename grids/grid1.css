@@ -1,0 +1,99 @@
+
+
+.myGrid1{
+    display: grid;
+    /*grid-template-columns: repeat(3,2fr);*/
+    /*grid-template-columns: 2fr 2fr 2fr;*/
+    
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-column-gap: 20px;      /* width  of the div */
+    grid-row-gap: 10px;         /* height of the div */
+    margin-bottom: 80px;        /* a bottom space that split the whole grid for the next Element*/
+    
+}
+ 
+.myGrid1 > div{
+    background-color: #dddddd;
+}
+ /******************************************************************/
+
+
+.myGrid2{
+     display:grid;
+    grid-template-columns:2fr 0.5fr 1fr 2fr;
+     grid-row-gap:1em;
+     grid-column-gap:3em;
+    
+    margin-bottom: 100px;
+}
+ 
+.myGrid2 > div{
+     background-color: #c1c1c1;
+}
+
+.myGrid2 > div:nth-child(odd){
+    background-color:#7e7e7e; 
+}
+
+/****************************************************************************/
+
+
+.myGrid3{
+    display:grid;
+    grid-template-columns: repeat(3,1.5fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: 2em;
+    background-color:#7e7e7e; 
+}
+
+.myGrid3 > div{
+    background-color: #ccc;
+}
+
+.myGrid3  .nested{
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1.5fr ;
+    grid-template-rows: 2fr 1.5fr ;
+   grid-auto-rows: minmax( 70px,auto) ;
+    grid-row-gap:1em; 
+    grid-column-gap:1em; 
+    
+}
+.myGrid3  .nested>div{
+     background-color: #c95858;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

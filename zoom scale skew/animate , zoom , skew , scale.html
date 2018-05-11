@@ -1,0 +1,178 @@
+<!doctype HTML>
+    <html>
+        <head> 
+        
+        </head>
+    
+        <style> 
+            
+
+#zoom{margin-left: 100px; margin-top: 200px;}
+#zoom img{width: 200px; height: auto;}
+#zoom img:hover{transition:transform 1.5s ease; transform: scale(1.2)}
+/*#zoom img:hover{transition:transform 1.5s ease; transform: scale(1.2,1.5)}*/
+
+
+
+#zoom_skew{margin-left: 100px; margin-top: 200px;}
+#zoom_skew img{width:200px; height: auto; transform: skewX(10deg);transform:  skewY(20deg)}
+#zoom_skew img:hover{width:200px; height: auto; transform: skew(0)}
+
+            
+            
+#zoom_normal{margin-left: 100px; margin-top: 200px;}
+#zoom_normal img{width:200px; height: auto;}
+#zoom_normal img:hover{transition:width 2s ease ;  width:300px; height: auto;}
+
+
+#animation{margin-left: 100px; margin-top: 200px;}
+#animation img {width: 200px; height: auto;}         
+        </style>
+        
+        
+        
+        <body>
+            <div id="zoom">
+            <img src="1.jpg"> 
+                </div>
+             
+            <div id="zoom_skew">
+            <img src="1.jpg"> 
+            </div>
+            
+             <div id="zoom_normal">
+            <img src="1.jpg"> 
+            </div>
+            
+             
+             <div id="animation">
+            <img src="1.jpg" id="draw"> 
+            </div>
+            
+            
+             
+            
+             <div id="animation">
+            <img src="1.jpg" id="draw2"> 
+            </div>
+            
+            
+             
+             <div id="animation">
+            <img src="1.jpg" id="draw3"> 
+            </div>
+            
+            
+            
+            
+        </body>
+        
+        
+        
+        <script>
+         
+         var x=document.getElementById('draw');
+         x.addEventListener('click',function(){
+             x.animate(
+                 [
+                 {borderRadius:'10%'},
+                 {borderRadius:'30%'},
+                 {borderRadius:'50%'},
+                 {borderRadius:'80%'},
+                 {borderRadius:'100%'}
+                ]
+               ,
+                 {duration:1000,easing:"ease-in-out",iterations:2}       
+                      
+                      )
+          })
+         
+         
+         
+         
+         
+         
+         
+         var ball=document.getElementById('draw2');
+         ball.addEventListener('click',function(){
+             ball.animate(
+                 [
+                 {borderRadius:'50%',marginLeft:'20px',transform:'rotate(20deg)' },
+                 {borderRadius:'50%',marginLeft:'50px',transform:'rotate(40deg)' },
+                 {borderRadius:'50%',marginLeft:'90px',transform:'rotate(60deg)' },
+                 {borderRadius:'50%',marginLeft:'120px',transform:'rotate(80deg)' },
+                 {borderRadius:'50%',marginLeft:'150px',transform:'rotate(100deg)' },
+                 {borderRadius:'50%',marginLeft:'180px',transform:'rotate(120deg)' },
+                 {borderRadius:'50%',marginLeft:'210px',transform:'rotate(140deg)' },
+                 {borderRadius:'50%',marginLeft:'230px',transform:'rotate(160deg)' },
+                 {borderRadius:'50%',marginLeft:'260px',transform:'rotate(180deg)' },
+                 {borderRadius:'50%',marginLeft:'290px',transform:'rotate(200deg)' },
+                 {borderRadius:'50%',marginLeft:'310px',transform:'rotate(240deg)' },
+                 {borderRadius:'50%',marginLeft:'330px',transform:'rotate(280deg)' },
+                 {borderRadius:'50%',marginLeft:'360px',transform:'rotate(320deg)' },
+                 {borderRadius:'50%',marginLeft:'390px',transform:'rotate(340deg)' },
+                 {borderRadius:'50%',marginLeft:'410px',transform:'rotate(360deg)' }
+                ]
+                 ,
+                  {duration:2000,easing:'ease-in-out',iterations:2});
+             
+             
+         })
+         
+         
+         
+         
+         
+         
+         
+         
+         
+          var x=document.getElementById('draw3');
+         x.addEventListener('click',function(){
+             x.animate(
+                 [
+                 {borderRadius:'50%',marginLeft:'20px',transform:'rotate(20deg)' },
+                 {borderRadius:'50%',marginLeft:'50px',transform:'rotate(40deg)' },
+                 {borderRadius:'50%',marginLeft:'90px',transform:'rotate(60deg)' },
+                 {borderRadius:'50%',marginLeft:'120px',transform:'rotate(80deg)' },
+                 {borderRadius:'50%',marginLeft:'150px',transform:'rotate(100deg)' },
+                 {borderRadius:'50%',marginLeft:'180px',transform:'rotate(120deg)' },
+                 {borderRadius:'50%',marginLeft:'210px',transform:'rotate(140deg)' },
+                 {borderRadius:'50%',marginLeft:'230px',transform:'rotate(160deg)' },
+                 {borderRadius:'50%',marginLeft:'260px',transform:'rotate(180deg)' },
+                 {borderRadius:'50%',marginLeft:'290px',transform:'rotate(200deg)' },
+                 {borderRadius:'50%',marginLeft:'310px',transform:'rotate(240deg)' },
+                 {borderRadius:'50%',marginLeft:'330px',transform:'rotate(280deg)' },
+                 {borderRadius:'50%',marginLeft:'360px',transform:'rotate(320deg)' },
+                 {borderRadius:'50%',marginLeft:'390px',transform:'rotate(340deg)' },
+                 {borderRadius:'50%',marginLeft:'410px',transform:'rotate(360deg)' },
+                 {borderRadius:'50%',marginLeft:'-20px',transform:'rotate(-20deg)' },
+                 {borderRadius:'50%',marginLeft:'-50px',transform:'rotate(-40deg)' },
+                 {borderRadius:'50%',marginLeft:'-90px',transform:'rotate(-60deg)' },
+                 {borderRadius:'50%',marginLeft:'-120px',transform:'rotate(-80deg)' },
+                 {borderRadius:'50%',marginLeft:'-150px',transform:'rotate(-100deg)' },
+                 {borderRadius:'50%',marginLeft:'-180px',transform:'rotate(-120deg)' },
+                 {borderRadius:'50%',marginLeft:'-210px',transform:'rotate(-140deg)' },
+                 {borderRadius:'50%',marginLeft:'-230px',transform:'rotate(-160deg)' },
+                 {borderRadius:'50%',marginLeft:'-260px',transform:'rotate(-180deg)' },
+                 {borderRadius:'50%',marginLeft:'-290px',transform:'rotate(-200deg)' },
+                 {borderRadius:'50%',marginLeft:'-310px',transform:'rotate(-240deg)' },
+                 {borderRadius:'50%',marginLeft:'-330px',transform:'rotate(-280deg)' },
+                 {borderRadius:'50%',marginLeft:'-360px',transform:'rotate(-320deg)' },
+                 {borderRadius:'50%',marginLeft:'-390px',transform:'rotate(-340deg)' },
+                 {borderRadius:'50%',marginLeft:'-410px',transform:'rotate(-360deg)' }     
+                 ]
+                  ,{duration:5000,easing:'ease-in-out',iterations:2});
+             
+          })
+         
+         
+         
+         
+         
+         
+            
+        </script>
+        
+        
+    </html>

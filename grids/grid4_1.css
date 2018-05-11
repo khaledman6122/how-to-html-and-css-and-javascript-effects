@@ -1,0 +1,141 @@
+.wrapper{
+    width:900px;margin: auto;   
+    display: grid;
+    grid-template-columns: repeat(8,1fr) ;
+    grid-auto-rows: minmax(100px,auto);
+    grid-row-gap:5px ;
+    grid-column-gap:8px ;
+    position: relative; 
+    /* just because we want visualizer inside it and no messing with our grid..and every thing still/ and save's  it's position 
+    so visualizer will be absolute */
+    
+}
+
+.wrapper div:nth-child(odd){
+    background-color: #ccc;
+}
+.wrapper div:nth-child(even){
+    background-color: #797878;
+}
+
+
+.one{
+    grid-column-start: 1;
+    grid-column-end: 9;
+}
+.two , .four{
+    grid-column: 5/9;
+}
+.three {
+    grid-column: span 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+ 
+.five , .six{
+ grid-column: 1/9;
+} 
+.six{
+    grid-row: span 4;
+}
+
+
+
+/***************************VISUALIZER*******************************/
+
+input:checked + .wrapper .visualizer 
+{
+    display: grid;
+     
+}
+
+.visualizer{
+    display: none;  /*its grid but we did that to show our visualizer in case of delete visualizer after finishing our work make visualizer  display: grid ;*/
+    position: absolute;
+    grid-template-columns: repeat(6,1fr);    
+    grid-auto-rows: minmax(100%,auto); /*this means we took the total height of our parent class such as height:100%; */
+    width:100%;
+    height: 100%;
+    /*positioning*/
+    top:0;
+    left:0;
+    opacity: 0.2;
+    background:transparent;
+    padding: 0;
+}
+.visualizer p {
+    border: 1px solid black;
+    opacity: 0.3;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,57 @@
+<!doctype HTML>
+
+<html lang="en">
+<head>
+<title>  </title>    
+<meta charset="utf-8">    
+</head>
+
+    
+     <style>
+         .loading{
+             width:100px; height: 100px;
+            /*width and height in main div  must be bigger than child div*/
+
+             border:5px solid #b7b7b7;
+             border-bottom:5px solid #ff5252;
+             border-radius: 50%;
+              animation: spin 10s linear infinite;      
+             /*time in main div  must be bigger than child div*/
+              -webkit-animation: spin 10s linear infinite;
+         } 
+         .loadingInside{
+             width:80px; height: 80px;
+             border:5px solid #b7b7b7;  
+              border-top: 4.8px dotted #14ff00;
+              /*border-top:#000 ;*/ /*don't make it ransparent*/
+             
+             border-radius: 50%;
+              animation: spin 2s linear infinite;
+              -webkit-animation: spin 2s linear infinite;
+         } 
+            
+         
+         @keyframes spin{
+             0%{transform: rotate(0deg);}
+             100%{transform: rotate(360deg);}
+         }
+         
+        
+     </style>
+   
+   
+   
+   
+   
+   <body>
+   <div class="loading">
+       <div class="loadingInside"></div>
+       <div class="loadingInside2"></div>
+       <div class="loadingInside3"></div>
+       </div>
+   
+    </body>
+    
+    
+    
+    </html>

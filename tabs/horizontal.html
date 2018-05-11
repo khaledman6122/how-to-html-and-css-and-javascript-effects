@@ -1,0 +1,85 @@
+<!doctype HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="horizontal.css">
+    </head>
+
+    <style>
+        
+        .allTabs{border:1px solid #000000;
+            overflow: hidden;
+            background-color: aqua;
+        }
+        
+        
+        .allTabs button.btn  {background-color:#bfbfbf; padding: 16px 12px; border:none;}
+        .allTabs .btn:hover{background-color: #fff;}
+        .allTabs button.active{ background-color: red;}
+        .city_content{background-color: red; display:none;}
+        
+        
+    </style>
+    
+    
+    
+    <body > <!--  onload="openCity(event,'london')";  but it in body if you want the first city displayed automatically-->
+        
+        
+       
+    <div class="allTabs">
+        <button class="btn" onclick="openCity(event,'london')">london</button>
+        <button class="btn" onclick="openCity(event,'tokyo')">tokyo</button>
+        <button class="btn" onclick="openCity(event,'paris')">paris</button>
+        </div>
+        
+     <div class="city_content" id="london">
+        <h3>London is the royal capital of england</h3>
+         <p>i love this country it gives me the feeling of a king</p>
+        </div>
+        
+        <div class="city_content" id="tokyo">
+        <h3>tokyo is the capital of technology</h3>
+         <p>so much electronic devices...a virtual life is in there </p>
+        </div>
+        
+        
+        
+        <div class="city_content" id="paris">
+        <h3>eiffel tower</h3>
+         <p>if you go to paris you should visit eiffel tower</p>
+    </div>
+        
+        
+        <script>
+        function openCity(evt,myCity){
+             
+    var cities=document.getElementsByClassName('city_content');
+         var btns=document.getElementsByClassName('btn');
+
+        for(var i=0; i<cities.length;i++ )
+        cities[i].style.display="none";
+        
+        for(var i=0; i<btns.length; i++)
+        btns[i].className = btns[i].className.replace(" active","");
+            
+        document.getElementById(myCity).style.display= "block";
+        evt.currentTarget.className += " active";
+            
+            
+       } 
+    </script>
+        
+        
+        
+    </body>
+    
+    
+    
+    
+     
+    
+    
+     
+    
+</html>

@@ -1,0 +1,93 @@
+.wrapper{
+    padding: 0; margin: auto;
+    max-width:800px;
+     background-color: mediumvioletred;
+    display: grid;
+    
+     
+    grid-template-columns: repeat(3,1fr);
+    /*  means a grid of 3 columns each one of them has a measure of 1fr */
+   
+    /* fr is a scale not a specific measure ... 
+    if we have 
+    grid-template-columns: 1fr 2fr; 
+    it means that the second column is 2 twice in the height than the first column */
+    grid-auto-rows:minmax(30px,auto);
+    /* for every row in the grid a height of 30px and if the content of a specific cell is bigger than the height of the row it will "auto" stretch the height of the whole row not just the height of the cell */
+    
+}
+
+.wrapper  div{ background-color: aqua;}
+.wrapper  div:nth-child(even){ background-color: #ccc;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

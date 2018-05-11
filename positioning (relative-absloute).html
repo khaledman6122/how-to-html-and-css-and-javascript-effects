@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="design a template with html and css ">
+</head>
+  
+
+    <style>
+        
+        .one{
+            background-color: lawngreen; 
+            width: 500px; height:500px;
+            position: relative
+          }
+       
+        .two{
+            background-color: #f00; 
+            width: 200px; height:1000px;
+                position: absolute;
+              } 
+        
+        
+        /*the unspecified element*/
+         .future{
+            background-color: #1d00fc; 
+            width: 400px; height:300px;
+           }
+       
+        .future2{position: relative; background-color:rgb(105, 0, 209);}
+        
+        
+    </style>
+    
+    <body>
+        
+      
+        <div class="one"></div>
+       
+        <div class="two"></div>
+
+        
+        <div class="future"></div>
+
+        
+        
+        
+        <pre class="future2">
+       
+        -if .one cames first and relative AND .two cames second and absloute
+        - .one and .two no one will cover the other  BUT  .two will cover .future   if we don't specify it's position
+        
+        
+        
+        
+        -if  .two cames first and absloute AND .one cames second "unspecified"  AND .future "unspecified" cames third  AND 
+        -.two will cover up .one  and .future 
+        
+        
+        -if .two cames first and absloute  AND .one cames second "unspecified"  AND .future "unspecified" cames third  AND .future2 cames fourth and "relative" 
+        -.two will cover up .one and .future BUT .future2"relative" will cover up .one 
+        
+        
+        </pre>
+        
+        
+        
+        <p>
+        summary:
+            absloute will cover anyafter if it's not specified
+            absloute will be covered by anyafter if it's relative
+            absloute will be positioned correct in its place by anybefore "relative"
+        
+        </p>
+        
+        
+        
+    </body>
+      
+    
+</html>
+    

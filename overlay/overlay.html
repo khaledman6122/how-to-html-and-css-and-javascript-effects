@@ -1,0 +1,76 @@
+<!doctype HTML>
+    <html>
+        <head> 
+        
+        </head>
+    
+        <style> 
+        
+            p:nth-child(1){background-color: dodgerblue; color: #fff; width:150px;}        
+            
+            .overlay{background-color: rgba(38, 38, 38, 0.83); color: #fff; width: 100%; height:auto;text-align: center;top:0;left:0;right: 0;bottom: 0;  position: fixed; z-index: 1;
+            display: none;
+            }   
+            
+            #divOverlay h4{font-size: 25px; font-family: serif; text-decoration: underline; }
+             #imgOverlay img{width:600px; height: auto; margin: auto; margin-top: 50px;}
+        </style>
+        
+        
+        
+        <body>
+            
+            
+            
+<p onclick="startOverlay()">click to get overlay</p>
+<div onclick="endOverlay()" class="overlay" id='divOverlay'>
+    <h4>this is a heading inside our overlay effect</h4>    
+    <p>this is the overlay effect</p>    
+            </div>
+            
+           
+            
+            
+            
+            
+<img src="1.jpg" onclick="startOverlay2()" width="150px" height="auto">
+    <div class="overlay" onclick="endOverlay2()" id="imgOverlay">
+        <img src="1.jpg">
+            </div>         
+       
+            
+            
+        </body>
+        
+        
+        
+        <script>
+        
+            
+             
+            function startOverlay(){
+                var x=document.getElementById('divOverlay');
+                x.style.display='block';
+            }
+            
+            
+             function endOverlay(){
+                var x=document.getElementById('divOverlay');
+                x.style.display='none';
+            }
+             
+            
+            function startOverlay2(){
+                var img=document.getElementById('imgOverlay');
+                img.style.display='block';
+            }
+            
+            function endOverlay2(){
+                var img=document.getElementById('imgOverlay');
+                img.style.display='none';
+            }
+             
+        </script>
+        
+        
+    </html>
